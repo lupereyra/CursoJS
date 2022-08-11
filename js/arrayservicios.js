@@ -23,19 +23,40 @@ function generadorServicios () {                         //genero un objeto y lo
 }
 
 generadorServicios()
+console.table(servicios)
 
-let tarifaActualizada = servicios.map(servicio=>{     //Utilizo el metodo map para recorrer mi array y actualizar las tarifas en un 60% por inflacion
+let ajusteInflacion = 1.6
+
+let actualizarTarifa = servicios.map(servicio=>{     //Utilizo el metodo map para recorrer mi array y actualizar las tarifas en un 60% por inflacion
     return{
         tipo: servicio.tipo,
         periodo: servicio.periodo,
-        tarifa: servicio.tarifa*1.6
+        tarifa: servicio.tarifa*ajusteInflacion
     }
 })
 
-console.table(tarifaActualizada)
+console.table(actualizarTarifa)
 
 
 
+alert("Bienvenido al balneario El Soleado!")
+let solicitud = prompt("Que servicio desea adquirir hoy? \n1)carpa \n2)sombrilla")
+while(solicitud!= 1 && solicitud!= 2){
+        alert("La opcion ingresada es incorrecta")
+        solicitud = prompt("Que servicio desea adquirir hoy? \n1)carpa \n2)sombrilla")
+    } 
 
+if(solicitud == 1){
+        servicioElejido = "carpa"
+
+    } else{
+        servicioElejido = "sombrilla"
+
+}
+
+
+let servSolicitado = servicios.filter(el => el.tipo == servicioElejido)   //utilizo filter para mostrar solo las tarifas del servicio requerido por el usuario
+
+console.table(servSolicitado)
 
 
