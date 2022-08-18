@@ -1,0 +1,10 @@
+.solicitud{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#btnConsulta{
+    background-color:blueviolet;
+    border-radius: 5px;
+}

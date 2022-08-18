@@ -1,80 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/arrayservicios.js"></script>
-    <title>Primera pre-entrega</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/arrayservicios.js"></script>
+    <script defer src="js/eventos.js"></script>
+    <title>Desafio-Eventos</title>
 </head>
+
 <body>
-    <h1>Servicios ofrecidos por un balenario</h1>
-    <ul>
-        <li>Visualizar servicios disponibles con sus respectivas tarifas</li>
-        <li>Hacer ajuste de precios por inflacion</li>
-        <li>Visualizar las diferentes tarifas del servicio solicitado por el usuario</li>
-    </ul>
+    <h1 id="titulo">Bienvenido al balneario El Soleado!</h1>
+   
     <table border="1px">
         <thead>
             <tr>
                 <th>SERVICIO</th>
                 <th>PERIODO</th>
-                <th>TARIFA</th>  
+                <th>TARIFA</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td>Carpa</td>
-                <td>Dia</td>
-                <td>2000.00</td>
-            </tr>
-        <tbody>
-            <tr>
-                <td>Carpa</td>
-                <td>Semana</td>
-                <td>10000.00</td>
-            </tr>
-            <tr>
-                <td>Carpa</td>
-                <td>Quincena</td>
-                <td>25000.00</td>
-            </tr>
-            <tr>
-                <td>Carpa</td>
-                <td>Mes</td>
-                <td>55000.00</td>
-            </tr>
-            <tr>
-                <td>Carpa</td>
-                <td>Temporada</td>
-                <td>140000.00</td>
-            </tr>
-                <td>Sombrilla</td>
-                <td>Dia</td>
-                <td>1000.00</td>
-            </tr>
-            <tr>
-                <td>Sombrilla</td>
-                <td>Semana</td>
-                <td>5000.00</td>
-            </tr>
-            <tr>
-                <td>Sombrilla</td>
-                <td>Quincena</td>
-                <td>15000.00</td>
-            </tr>
-            <tr>
-                <td>Sombrilla</td>
-                <td>Mes</td>
-                <td>25000.00</td>
-            </tr>
-            <tr>
-                <td>Sombrilla</td>
-                <td>Temporada</td>
-                <td>70000.00</td>
-            </tr>
+        <tbody id="cuerpo">
+           
         </tbody>
     </table>
+    <ul id="lista">
+      
+    </ul>
+    <div class="solicitud">
+        <div>
+            <label for="">E mail</label>
+            <input type="mail" id="email">
+        </div>
+    <div>
+        <label for="selectTipo">Tipo de servicio</label>
+        <select id="selectTipo" name="selectTipo">
+            <option value="" selected>...</option>
+        </select>
+    </div>
+    <div>
+        <label for="selectServi">Periodo</label>
+        <select id="selectServi" name="selectServi">
+            <option value="" selected>...</option>
+        </select>
+    </div>
     
+    <button id="btnConsulta">Quiero recibir info sobre el servicio</button>
+    </div>
 </body>
+
 </html>

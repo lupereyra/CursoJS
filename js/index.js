@@ -36,21 +36,21 @@ function mostrarServicios(){
 
 function tarifaCotizada(servicios, periodo){
     if(servicios === "carpa" && periodo ==="dia"){
-        return 4000
+        return 2000
     }else if(servicios === "carpa" && periodo ==="quincena"){
-        return 55000
-    }else if(servicios === "carpa" && periodo ==="mes"){
-        return 100000       
-    }else if(servicios === "carpa" && periodo ==="temporada"){
-        return  300000 
-    }else if(servicios === "sombrilla" && periodo ==="dia"){
-        return  1800
-    }else if(servicios === "sombrilla" && periodo ==="quincena"){
         return 25000
+    }else if(servicios === "carpa" && periodo ==="mes"){
+        return 55000       
+    }else if(servicios === "carpa" && periodo ==="temporada"){
+        return  140000 
+    }else if(servicios === "sombrilla" && periodo ==="dia"){
+        return  1000
+    }else if(servicios === "sombrilla" && periodo ==="quincena"){
+        return 15000
     }else if(servicios === "sombrilla" && periodo ==="mes"){
-        return 45000 
+        return 25000 
     }else {
-        return 160000
+        return 70000
     }
         
 }
